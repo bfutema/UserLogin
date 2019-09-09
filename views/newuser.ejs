@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="/lib/animate/animate.css">
+  </head>
+  <body>
+    <div class="limiter-container">
+      <div class="background-container">
+        <div class="login-container">
+          <form action="/addlogin" method="POST" class="login-form validate-form">
+
+            <span class="login-form-title">Login</span>
+
+            <div class="wrap-input validate-input" data-validate="Nome de usuário obrigatório!">
+              <input id="Username" class="input" type="text" name="username" placeholder="Nome de usuário">
+              <span class="focus-input"></span>
+              <span class="symbol-input">
+                  <span class="lnr lnr-envelope"></span>
+              </span>
+            </div>
+
+            <div class="wrap-input validate-input" data-validate="Digite um e-mail válido: ex@abc.xyz">
+                <input id="Email" class="input" type="text" name="email" placeholder="E-mail">
+                <span class="focus-input"></span>
+                <span class="symbol-input">
+                    <span class="lnr lnr-envelope"></span>
+                </span>
+            </div>
+
+            <div class="wrap-input validate-input" data-validate="Senha obrigatória!">
+              <input id="Senha" class="input" type="password" name="senha" placeholder="Senha" autocomplete="off">
+              <span class="focus-input"></span>
+              <span class="symbol-input">
+                <span class="lnr lnr-lock"></span>
+              </span>
+            </div>
+
+            <div class="login-container-form-btn">
+              <button class="login-form-btn">
+                Criar conta
+              </button>
+            </div>
+
+            <div class="text-center w-full login-container-footer">
+              <a class="txt1 bo1 hov1" href="/">
+                Voltar
+              </a>
+            </div>
+
+          </form>
+        </div> <!-- login-container -->
+      </div> <!-- background-container -->
+    </div> <!-- limiter-container -->
+    <script src="/lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/lib/bootstrap/js/popper.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/javascripts/LoginController.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('#Username').val('Admin');
+        $('#Email').val('admin@admin.com');
+        $('#Senha').val('123456');
+      });
+    </script>
+  </body>
+</html>
